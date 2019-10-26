@@ -28,4 +28,127 @@ write('Cifrele ghicite de Vasile sunt: ');
 write(x-2, x-1, x, x+1, x+2);
 end.
 4======================================
+var x,x1,x2,x3,x4:integer;
+begin
+read(x);
+x4:= x mod 10;
+x1:= x div 1000;
+x2:= x div 100;
+x2:= x2 mod 10;
+x3:= x mod 100;
+x3:= x3 div 10;
+writeln('a)', x4,x2,x3,x1);
+writeln('b)', x1,x3,x2,x4);
+writeln('c)', x1,0,0,x4);
+end.
+5======================================
+var x:integer;
+begin
+read(x);
+writeln((x mod 1000) + (x mod 100)+ (x mod 10));
+end.
+6======================================
+var x,z:integer;
+m:real;
+begin
+readln(x,z);
+m:=(x+z)/2;
+writeln('V. Medie', m);
+if x>z then writeln('Diferenta=', x-z) else writeln('Diferenta=', z-x);
+readln;
+end.
+7======================================
+var s,p:integer;
+Dob:real;
+begin
+readln(s, p);
+dob:= (s*(p/100)*3/12);
+writeln(dob);
+end.
 
+8======================================
+var v1,v2,s,s1:integer;
+rez:real;
+begin
+read(v1,v2);
+if v1>v2 then s1:=v1-v2 else s1:=v2-v1;
+rez:=s/s1;
+write(rez,'ore');end.
+
+9======================================
+var s,l,p:real;
+begin
+read(s);
+l:=sqrt(s);
+p:=4*l;
+writeln(l,p);end.
+
+10======================================
+var r,w,rez:real;
+begin
+read(r,w);
+rez:=3*(r*w/100);
+write(rez);
+rez:=r*w/100;
+write('4',rez);
+rez:=r*w/100;
+write('5',rez);end.
+
+11======================================
+var N:integer;
+begin
+read(N);
+write(N+40);end.
+
+12======================================
+var n,o,m,s,z:integer;
+begin
+read(N);
+o:=n*24;
+m:=o*60;
+s:=o*3600;
+writeln(O,M,S);
+o:=0;m:=0;s:=0;
+z:=n*7;
+o:=z*24;
+m:=z*60;
+s:=o*3600;
+writeln(O,M,S);
+o:=0;m:=0;s:=0;
+o:=31*24;
+M:=o*60;
+s:=o*3600;
+writeln(O,M,S);end.
+
+13======================================
+var x,y,z:real;//1,41mb
+rez:real;
+begin 
+read(x,y,z);
+rez:=(((x+y+z)*1000)/1.41);
+end.
+
+14======================================
+var x:integer;
+begin
+  read(x);//xxxx
+  write((x div 10)+ (x div 100) + (x div 1000));
+end.
+
+15======================================
+var n,k,x:integer;
+begin
+read(n,k,x);
+write((n+k)-x);end.
+
+16======================================
+var x,x1,x2,x3:integer;
+begin
+read(x); 
+x3:=x mod 10;
+x1:= x div 10;
+x1:= div 100;
+x2:=x div 10;
+x2:=x2 mod 10;
+write(x3,x2,x1);end.
+17======================================
