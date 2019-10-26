@@ -30,6 +30,7 @@ end.
 4======================================
 var x,x1,x2,x3,x4:integer;
 begin
+write('Introduceti un numar din 4 cifre: ');
 read(x);
 x4:= x mod 10;
 x1:= x div 1000;
@@ -40,10 +41,11 @@ x3:= x3 div 10;
 writeln('a)', x4,x2,x3,x1);
 writeln('b)', x1,x3,x2,x4);
 writeln('c)', x1,0,0,x4);
-end.
+end. 
 5======================================
 var x:integer;
 begin
+write ('Introduceti un numar din 4 cifre: ');
 read(x);
 writeln((x mod 1000) + (x mod 100)+ (x mod 10));
 end.
@@ -51,9 +53,12 @@ end.
 var x,z:integer;
 m:real;
 begin
-readln(x,z);
+writeln('Introduceti varsta lui Nicolae');
+readln(x);
+writeln('Introduceti varsta lui Mihai');
+readln(z);
 m:=(x+z)/2;
-writeln('V. Medie', m);
+writeln('Varsta Medie', m);
 if x>z then writeln('Diferenta=', x-z) else writeln('Diferenta=', z-x);
 readln;
 end.
@@ -61,45 +66,59 @@ end.
 var s,p:integer;
 Dob:real;
 begin
-readln(s, p);
+write('Introduceti Suma: ');
+readln(s);
+write('Introduceti procentul % : ');
+readln(p);
 dob:= (s*(p/100)*3/12);
-writeln(dob);
+writeln('Dobanda timp de 3 luni este: ', dob);
 end.
-
 8======================================
 var v1,v2,s,s1:integer;
 rez:real;
 begin
-read(v1,v2);
+write('Introduceti viteza Marinei: ');
+read(v1);
+write('Introduceti viteza Valentinei: ');
+read(v2);
+write('Introduceti distanta initiala: ');
+read(s);
 if v1>v2 then s1:=v1-v2 else s1:=v2-v1;
 rez:=s/s1;
-write(rez,'ore');end.
-
+write(rez,'ore');
+end.
 9======================================
 var s,l,p:real;
 begin
+write('Dati aria patratului: ');
 read(s);
 l:=sqrt(s);
 p:=4*l;
-writeln(l,p);end.
-
+writeln('Latura patratului este: ', l);
+writeln('Perimetrul patratului este: ', p);
+end.
 10======================================
 var r,w,rez:real;
 begin
-read(r,w);
+writeln('Introduceti suma depusa: ');
+read(r);
+writeln('Introduceti procentul lunar: ');
+read(w);
 rez:=3*(r*w/100);
-write(rez);
-rez:=r*w/100;
-write('4',rez);
-rez:=r*w/100;
-write('5',rez);end.
-
+writeln('Suma peste 3 luni: ',rez);
+rez:=4*r*w/100;
+writeln('Suma peste 4 luni: ',rez);
+rez:=5*r*w/100;
+writeln('Suma peste 5 luni: ',rez);
+end.
 11======================================
 var N:integer;
 begin
+write('Introduceti timpul in care a rezolvat primul elev: ');
 read(N);
-write(N+40);end.
-
+write('Timpul necesar elevilor este: ');
+write(N+40);
+end.
 12======================================
 var n,o,m,s,z:integer;
 begin
@@ -131,16 +150,15 @@ end.
 14======================================
 var x:integer;
 begin
-  read(x);//xxxx
-  write((x div 10)+ (x div 100) + (x div 1000));
+read(x);//xxxx
+write((x div 10)+ (x div 100) + (x div 1000));
 end.
-
 15======================================
 var n,k,x:integer;
 begin
 read(n,k,x);
-write((n+k)-x);end.
-
+write((n+k)-x);
+end.
 16======================================
 var x,x1,x2,x3:integer;
 begin
