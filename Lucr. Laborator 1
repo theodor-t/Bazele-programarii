@@ -20,4 +20,12 @@ x1:= x div 1000;
 write('Numărul care se obține prin eliminarea cifrelor din mijloc: ', x1,x2);
 end.
 3=====================================
+var x:integer;
+begin
+write('Introduceti o cifra: ');
+read(x);
+write('Cifrele ghicite de Vasile sunt: ');
+write(x-2, x-1, x, x+1, x+2);
+end.
+4======================================
 
