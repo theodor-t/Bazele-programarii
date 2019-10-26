@@ -150,25 +150,35 @@ end.
 14======================================
 var x:integer;
 begin
-read(x);//xxxx
+write('Introduceti un numar din 4 cifre: ');
+read(x);
+write('Suma numerelor care se obțin eliminând pe rând ultima cifră: ');
 write((x div 10)+ (x div 100) + (x div 1000));
 end.
 15======================================
 var n,k,x:integer;
 begin
-read(n,k,x);
+write('Introduceti pretul cu care a fost vandut automobilul: ');
+read(n);
+write('Introduceti suma de pe contul bancar: ');
+read(k);
+write('Introduceti pretul noului automobobil: ');
+read(x);
+write('Dupa procurare familia va avea: ');
 write((n+k)-x);
 end.
 16======================================
 var x,x1,x2,x3:integer;
 begin
+write('Introduceti numarul: ');
 read(x); 
 x3:=x mod 10;
 x1:= x div 10;
-x1:= div 100;
+x1:= x div 100;
 x2:=x div 10;
 x2:=x2 mod 10;
-write(x3,x2,x1);
+write('Imaginea inversa a numarului: ');
+writeln(x3,x2,x1);
 end.
 17======================================
 const 
