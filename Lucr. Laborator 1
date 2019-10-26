@@ -1,0 +1,12 @@
+1.
+var n,l,z,h:integer;
+begin
+write('Introduceti nr. de ani: ');
+read(n);
+l:=n*12;
+z:=n*365;
+h:=z*24;
+writeln('Numarul de luni este: ', l);
+writeln('Numarul de zile este: ', z);
+writeln('Numarul de ore este: ', h);
+end.
