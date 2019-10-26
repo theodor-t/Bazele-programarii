@@ -1,4 +1,4 @@
-1.
+1==================================
 var n,l,z,h:integer;
 begin
 write('Introduceti nr. de ani: ');
@@ -10,3 +10,14 @@ writeln('Numarul de luni este: ', l);
 writeln('Numarul de zile este: ', z);
 writeln('Numarul de ore este: ', h);
 end.
+2===================================
+var x,x1,x2:integer;
+begin
+write('Introduceti un numar din 4 cifre: ');
+read(x);
+x2:= x mod 10;
+x1:= x div 1000;
+write('Numărul care se obține prin eliminarea cifrelor din mijloc: ', x1,x2);
+end.
+3=====================================
+
