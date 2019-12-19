@@ -1,0 +1,39 @@
+Se citește o matrice A cu n linii și m coloane (m<=30, n<=30) cu elemente numere
+întregi. Scrieți un program care schimbă cu locurile primul rând cu rândul în care
+apare primul element cu valoarea 0.
+6.
+var a : array[1..100,1..100] of integer;
+       i,j,x,y,s,x1,rez:integer;
+      nr:integer;
+      aux:integer;  
+begin
+       write('Indica numarul de linii: ');
+       readln(x);
+       write('Indica numarul de coloane: ');
+       readln(y);      
+       for i:=1 to x do
+              for j:=1 to y do 
+                begin
+                     write('A[',i,',',j,']=');
+                     readln(A[i,j]);
+              end;          
+       for i:=1 to x do
+              for j:=1 to y do           
+                if a[i,j] = 0 then
+                begin               
+                  nr:=i;
+                  break;
+                end;                
+              writeln('nr=',nr);
+    for i:=1 to x do begin
+        aux := a[nr,i];
+        a[nr,i] := a[1,i];
+        a[1,i] := aux;
+    end;        
+      writeln('Matricea');
+       for i:=1 to x do begin
+              for j:=1 to y do
+                     write(A[i,j],' ');
+               writeln;
+       end;        
+end.

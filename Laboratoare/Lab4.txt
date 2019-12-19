@@ -1,0 +1,34 @@
+Să se elaboreze un program care afișează toate numerele de 3 cifre, suma cifrelor
+cărora este divizibilă prin 5.
+
+var x,x1,x2,x3,i:integer;
+begin
+for i:=100 to 999 do 
+begin
+x:=i;
+x3:=x mod 100;
+x2:=x div 10;
+x2:= x2 mod 10;
+x1:=x div 100;
+if (x1+x2+x3) mod 5 = 0 then writeln(i);
+end;
+end.
+
+
+Se consideră „fericit” biletul de 6 cifre, dacă suma primelor 3 cifre a căruia este
+egală cu suma ultimelor 3 cifre. Să se elaboreze un program care afișează toate
+numerele fericite.
+var
+ x1,x2,x3,x4,x5,x6:integer;
+begin
+ for x1:=0 to 9 do
+  for x2:=0 to 9 do
+   for x3:=0 to 9 do
+    for x4:=0 to 9 do
+     for x5:=0 to 9 do
+      for x6:=0 to 9 do
+       if (x1+x2+x3=x4+x5+x6) then
+        write(x1,x2,x3,x4,x5,x6,' ');
+end.
+
+

@@ -1,0 +1,41 @@
+Să se elaboreze un program care completează un vector A cu n numere întregi citite
+de la tastieră și interschimbă elementele de la capetele vectorului.
+3.
+type a= array[1..100] of integer;
+var i:integer;
+x:a;
+n,aux:integer;
+begin
+  read(n);
+  for i:= 1 to n do 
+    readln(x[i]);
+    //schimb
+    aux:=x[n];
+    x[n]:=x[n-1];
+    x[n-1]:=aux;
+     for i:= 1 to n do
+      write(x[i], ' ');
+end.
+
+Să se elaboreze un program care completează un vector A cu n numere întregi citite
+de la tastieră și adaugă în vector pe poziția poz (citită de la tastieră), un nou element
+având ca valoare numărul elementelor negative din vector. La final programul
+afișează pe ecran vectorul obținut.
+16.
+type a=array[1..100] of integer;
+var i:integer;
+poz:integer;
+x:a;
+n,neg:integer;
+begin
+  readln(n);
+  writeln('poz=');readln(poz);
+  for i:=1 to n do
+    readln(x[i]);   
+    for i:=1 to n do
+      if x[i] < 0 then inc(neg);
+      x[poz]:=neg;
+      for i:=1 to n do
+        write(x[i],' ' );
+      end.
+

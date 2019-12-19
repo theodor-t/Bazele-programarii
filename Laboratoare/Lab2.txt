@@ -1,0 +1,31 @@
+În planul cartezian xOy, se dă un dreptunghi prin colțurile stânga-jos (xs, ys) și
+dreapta-sus (xd, yd). Să se determine dacă un punct oarecare (x,y) se află sau nu în
+interiorul dreptunghiului.
+16.
+var 
+xs,ys,xd,yd:integer;
+x,y:integer;
+begin
+Writeln('Introduceti xs,ys,xd,yd :');
+read(xs,ys,xd,yd);
+Writeln('Introduceti x,y :');
+read(x,y);
+if (x > sqrt(sqr((xs-xd)+sqr((ys-yd))))) or  (y > sqrt(sqr((xs-xd)+sqr((ys-yd))))) then write('In afara') else
+write('Se afla inauntru');
+end.
+
+Să se elaboreze un program care să citească de la tastatură trei numere reale a, b, c și
+să determine dacă acestea pot constitui lungimile laturilor unui triunghi. În caz
+afirmativ se va afișa tipul triunghiului (oarecare, isoscel, echilateral, dreptunghic).
+2.
+var a,b,c:integer;
+begin
+writeln('Introduceti 3 numere reale: ');
+read(a);
+read(b);
+read(c);
+if (a=b) or (a=c) or (b=c) then write(' isoscel');
+if ((a=b) and (a=c) and (b=c)) then write(' echilater..');
+if sqr(c)=sqr(a)+sqr(b) then write(' drept...');
+if ((a+b>c) and (a+c>b) and (b+c>a)) then write(' oricare...');
+end.

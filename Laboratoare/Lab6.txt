@@ -1,0 +1,41 @@
+Să se elaboreze o procedură care calculează soluțiile unei ecuații de gradul II:
+ax2+bx+c=0, pentru D≥0.
+1.  
+  var a,b,c:integer;
+  delta:real;
+  x1,x2:real; 
+  procedure x;
+  begin
+  delta:=sqr(b)-4*a*c;
+  if delta<0 then write('Nu are sol');
+  if delta=0 then
+  begin
+  x1:=-(b/2*a);
+  write('x1=x2=',x1);
+  end;
+  if delta>0 then begin
+  x1:=((-b+sqrt(delta))/2*a);
+  x2:=((-b-sqrt(delta))/2*a);
+  write('x1=',x1,'x2=',x2);
+  end;
+  end;
+  begin
+  read(a,b,c);
+  x;
+ end.
+
+Să se elaboreze o procedură care determină distanța dintre două puncte A(x1,y1) și
+B(x2,y2) și coordonatele mijlocului acestui segment C(x,y).
+16.
+var x1,y1,x2,y2:real;dist:real;
+procedure x;
+begin
+  dist:=sqrt((sqr(x2-x1))+sqr(y2-y1));
+  write('M(',(x1+x2)/2, ';',(y1+y2)/2,')');
+end;
+begin
+  writeln('Introduceti distantele x1,y1,x2,y2: ');
+  read(x1,y1,x2,y2);
+  x;
+end.
+

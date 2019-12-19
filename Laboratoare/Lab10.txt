@@ -1,0 +1,38 @@
+Se citește un text de cel mult 255 caractere. Scrieți un program care înlocuiește toate
+vocalele din text cu ‘*’. Exemplu: ‘abedi’  ‘*b*d*’.
+1. 
+var s:string;
+i:integer;
+begin
+  readln(s);
+  for i:= 1 to length(S) do
+    if s[i] in ['a', 'e', 'i', 'o', 'u'] then s[i] := '*';
+    
+    writeln(s);
+end.
+
+Pentru două șiruri de caractere cu maximum 100 de caractere fiecare (litere mici ale
+alfabetului englez), cu caracterele în ordine alfabetică, citite de la tastatură, se cere
+să se afișeze pe ecran un al treilea șir, format din toate caracterele primelor două,
+așezate în ordine alfabetică. Exemplu: sir1=‘aefgo’ și sir2=‘bdir’  ‘abdefgior’
+16.
+var s,s1,s2: string;
+  i,j,n: integer;
+  ch: char;
+begin
+  write('s1=');
+  readln(s1);
+  writeln('s2=');
+  readln(s2);
+  s:=s1+s2;
+  n:=length(s);
+  for i:=1 to n-1 do
+    for j:=i+1 to n do
+      if s[i]>s[j] then
+      begin
+        ch:=s[i];
+        s[i]:=s[j];
+        s[j]:=ch;
+      end;
+   writeln(s);
+end.

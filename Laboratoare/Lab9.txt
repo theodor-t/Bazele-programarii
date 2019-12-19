@@ -1,0 +1,37 @@
+Să se elaboreze un program care completează un vector A cu n numere întregi citite
+de la tastieră și determină dacă vectorul dat conține cel puțin o pereche de elemente
+alăturate cu valori egale.
+1.
+type a = array[1..100] of integer;
+var x:a;
+i:integer;
+n:integer;
+rez:integer;
+begin
+readln(n);
+for i:= 1 to n do
+readln(x[i]);
+
+for i:= 1 to n do 
+  if x[i] = x[i+1] then inc(rez);
+  writeln(rez);
+end.
+Să se elaboreze un program care completează un vector A cu n numere naturale citite
+de la tastieră și determină dacă vectorul dat conține cel puțin o pereche de elemente
+alăturate a căror sumă este egală cu X.
+14.
+var i,j,k: integer;
+  a: array [1..1000] of integer;
+  n,x:integer;
+begin
+  readln(n);
+  readln(x);
+for i:=1 to n do
+readln(a[i]);
+ for i:=1 to n do
+ begin
+   if i < n then 
+     if ((a[i] + a[i+1]) =x) then 
+     write(a[i], '--' , a[i+1], ' ');
+  end;
+end.
